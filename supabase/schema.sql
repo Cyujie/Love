@@ -339,9 +339,11 @@ grant select, insert, update, delete on public.couple_locations to authenticated
 create table if not exists public.couple_profiles (
   user_id uuid primary key references auth.users(id) on delete cascade,
   avatar_path text check (avatar_path is null or char_length(avatar_path) <= 512),
+  last_seen_at timestamptz,
   updated_at timestamptz not null default now()
 );
 
+alter table public.couple_profiles add column if not exists last_seen_at timestamptz;
 alter table public.couple_profiles enable row level security;
 
 drop policy if exists "users and their partners can read profiles" on public.couple_profiles;
