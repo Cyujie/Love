@@ -8,7 +8,8 @@
 - 通过邀请码创建/加入两人空间，并设置恋爱开始日
 - 恋爱天数和周年倒计时
 - 纪念日、生日、旅行等重要日期记录
-- 仅配对成员可看的照片与文字回忆
+- 仅配对成员可看的照片与文字回忆，并显示记录人
+- 每个账号可设置单独头像，配对成员可互相查看
 - 每日心情打卡
 - 共同愿望清单，支持记录进度和标记完成（最多 100 项）
 - 爱情树浇水、虚拟宠物喂养/陪玩、农场合作互动记录
@@ -20,7 +21,7 @@
 
 ## Supabase 项目配置
 
-网页已连接到 Supabase 项目 `Love`（新加坡区域），项目 URL 和 Publishable key 已写入 `config.js`。所需表、RLS 策略、配对 RPC、私有照片 bucket，以及房间方案和位置共享表均已在该项目建立；无需再次执行 SQL。完整初始化脚本和新增迁移保存在 `supabase/` 目录。
+网页已连接到 Supabase 项目 `Love`（新加坡区域），项目 URL 和 Publishable key 已写入 `config.js`。所需表、RLS 策略、配对 RPC、私有照片 bucket，以及房间方案、位置共享和账号头像表与私有头像 bucket 均已在该项目建立；无需再次执行 SQL。完整初始化脚本和新增迁移保存在 `supabase/` 目录。
 
 部署到 GitHub Pages 后，网页地址为 `https://cyujie.github.io/Love/`。仓库的 `.github/workflows/pages.yml` 会在推送到 `main` 时自动发布。首次发布前，在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。
 
