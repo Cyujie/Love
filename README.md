@@ -26,7 +26,7 @@
 
 在 `outputs` 目录运行 `python -m http.server 8000`，然后打开 `http://localhost:8000`。`config.js` 使用的是浏览器可用的 Publishable key；不要替换成 `service_role` 或 secret key，也不要把 secret key 发布到网页或 GitHub。
 
-注册默认发送邮箱验证邮件。验证后登录，任一方创建空间并分享 8 位邀请码；另一方注册并登录后输入邀请码加入。
+当前 Supabase 项目已关闭邮箱验证，注册成功后即可登录。登录后任一方创建空间并分享 8 位邀请码；另一方注册并登录后输入邀请码加入。
 
 ## 目前范围
 
